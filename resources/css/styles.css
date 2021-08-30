@@ -1,0 +1,75 @@
+header {
+	font-family: "Oswald", "Roboto", sans-serif;
+	font-size: 25px;
+
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+header .title {
+	font-size: 40px;
+	justify-self: flex-start;
+	padding-left: 10%;
+}
+
+header .title:hover {
+	cursor: default;
+}
+
+header .about:hover,
+.contact:hover,
+.projects:hover {
+	cursor: pointer;
+}
+
+#about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#about article p {
+	max-width: 110ch;
+	min-width: 80ch;
+}
+
+#about .image {
+	background-image: url("../images/profile-pic.jpg");
+	background-position: 50% 20%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 45vh;
+	width: 20em;
+	border-radius: 40px;
+	margin: 2%;
+}
+
+.skills-container {
+	grid-area: "skills";
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: center;
+	text-align: center;
+}
+
+#skills .skill {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	flex-direction: column;
+	width: 120px;
+	height: 100px;
+}
+
+#skills .skill img {
+	margin-top: 10px;
+	width: 50px;
+}
+
+#skills .skill p {
+	margin: 0;
+	margin-top: 12px;
+}
