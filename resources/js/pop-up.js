@@ -52,7 +52,7 @@ const removeDisplay = () => {
 const close_popup = () => {
     popup.classList.remove("animate");
     popup_box.classList.remove("animate");
-    setTimeout(removeDisplay, 400);
+    setTimeout(removeDisplay, 800);
 }
 
 

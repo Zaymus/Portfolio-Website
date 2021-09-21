@@ -150,26 +150,25 @@ header .about:hover,
 	background: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(7px);
-	transition: all 0.5s ease;
-	opacity: 0;
+	transition: all 800ms ease-in-out;
+	transform: translateY(-100%);
 }
 
 .pop_up-container.animate {
 	display: block;
-	opacity: 1;
+	transform: translateY(0);
 }
 
 .pop_up-container .row {
 	background-color: hsl(0, 0%, 100%);
 	border: 2px solid purple;
-	/* box-shadow: -10px 10px 15px black; */
 	padding: 25px;
 	margin: auto;
 	position: relative;
 	top: 50%;
 	overflow: hidden;
 	transform: scale(0) translateY(100%);
-	transition: all 0.5s;
+	transition: all 0.5s 0.8s;
 }
 
 .row.animate {
@@ -180,7 +179,7 @@ header .about:hover,
 	padding: 10px 0px 5px 0px;
 	overflow: hidden;
 	transform: translateY(-200%);
-	transition: all 500ms 300ms;
+	transition: all 500ms 1100ms;
 }
 
 .pop_up-container.animate .language_img--wrapper {
@@ -191,7 +190,7 @@ header .about:hover,
 	color: purple;
 	margin-bottom: 0.5em;
 	transform: translateX(300%);
-	transition: all 500ms 600ms;
+	transition: all 500ms 1400ms;
 }
 
 .pop_up-container.animate .pop_up-title {
@@ -204,7 +203,7 @@ header .about:hover,
 	transform: translateY(200%);
 	transition-timing-function: ease;
 	transition-duration: 500ms;
-	transition-delay: 300ms;
+	transition-delay: 1100ms;
 }
 
 .pop_up-body::first-line {
