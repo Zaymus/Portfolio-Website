@@ -1,5 +1,35 @@
-header {
+* {
 	font-family: "Oswald", "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+p {
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.container {
+	padding: 50px 0;
+}
+
+.row {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 12px;
+	text-align: center;
+}
+
+header {
 	font-size: 25px;
 
 	display: grid;
@@ -47,29 +77,129 @@ header .about:hover,
 }
 
 .skills-container {
-	grid-area: "skills";
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-content: center;
-	text-align: center;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
 }
 
-#skills .skill {
+.language_img {
+	width: 100%;
+	max-width: 100px;
+}
+
+.language {
+	width: 25%;
 	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.language_img--wrapper {
+	display: flex;
+	justify-content: center;
 	align-items: center;
-	justify-items: center;
-	flex-direction: column;
-	width: 120px;
-	height: 100px;
+	padding: 25px 16px;
 }
 
-#skills .skill img {
-	margin-top: 10px;
-	width: 50px;
+.language_img--wrapper img {
+	width: 100%;
+	max-width: 100px;
+	transition: all 300ms;
 }
 
-#skills .skill p {
-	margin: 0;
-	margin-top: 12px;
+.language:hover img {
+	filter: brightness(80%);
+	opacity: 0.86;
+	transform: scale(0.85) translateY(-10px);
+}
+
+.language:hover {
+	cursor: pointer;
+}
+
+.language_list {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.language_name {
+	position: absolute;
+	bottom: 50px;
+	transform: scale(1);
+	transition: all 300ms;
+	font-size: 20px;
+	opacity: 0;
+	z-index: -1000;
+}
+.language:hover .language_name {
+	transform: scale(1) translateY(50px);
+	opacity: 1;
+}
+
+.pop_up-container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: hsla(0, 0%, 100%, 0.9);
+	transition: all 0.5s ease;
+	opacity: 0;
+}
+
+.pop_up-container.animate {
+	display: block;
+	opacity: 1;
+}
+
+.pop_up-container .row {
+	background-color: hsl(0, 0%, 100%);
+	border: 1px solid purple;
+	padding: 25px;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: scale(0) translateY(100%);
+	transition: all 0.5s;
+}
+
+.row.animate {
+	transform: scale(1) translateY(-50%);
+}
+
+.pop_up .language_img--wrapper {
+	padding: 10px 0px 5px 0px;
+}
+
+.pop_up-title {
+	color: purple;
+	margin-bottom: 0.5em;
+}
+
+.pop_up-body {
+	text-align: left;
+	transform: scale(0);
+	transition: all 250ms 500ms;
+}
+
+.pop_up-body::first-line {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.pop_up-body::first-letter {
+	font-size: 3.5em;
+	font-weight: 750;
+	line-height: 1;
+	float: left;
+	padding: 0.1em 0.1em 0em 0em;
+	color: purple;
+}
+
+.pop_up-container.animate .pop_up-body {
+	transform: scale(1);
 }
