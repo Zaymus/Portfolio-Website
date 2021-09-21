@@ -31,27 +31,32 @@ p {
 
 header {
 	font-size: 25px;
-
-	display: grid;
-	grid-template-columns: 3fr 1fr 1fr 1fr;
-	justify-items: center;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	padding-left: 5%;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+	padding-right: 10%;
 }
 
 header .title {
 	font-size: 40px;
-	justify-self: flex-start;
-	padding-left: 10%;
 }
 
-header .title:hover {
-	cursor: default;
-}
-
-header .about:hover,
+header .title:hover,
+.about:hover,
 .contact:hover,
 .projects:hover {
 	cursor: pointer;
+}
+
+article h2 {
+	padding-left: 5vw;
 }
 
 #about {
