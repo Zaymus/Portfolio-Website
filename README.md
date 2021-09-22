@@ -20,11 +20,11 @@
 
 - _Open terminal or a similar app on your computer_
 - _change directory to where you want the files to be stored_
-- _copy <span>https://github.com/Zaymus/Flexbox_Landing_Page</span>_
+- _copy <span>https://github.com/Zaymus/portfolio-Website</span>_
 - _use git clone and paste that link after it to clone the repository_
 - _open the folder it provides_
 - _open the HTML folder inside_
-- _https://zaymus.github.io/Flexbox_Landing_Page/_
+- _https://zaymus.github.io/Portfolio-Website/_
 
 ## Known Bugs <a name="bugs"></a>
 
@@ -45,4 +45,3 @@ _Javascript_
 _This site is licensed under the GPL license_
 
 Copyright(c) 2021 **_Carson Brown_**
-
