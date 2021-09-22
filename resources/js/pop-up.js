@@ -8,6 +8,9 @@ const images = document.querySelectorAll(".language_img--wrapper");
 popup.style.display = "none";
 
 const language_clicked = (event) => {
+    languages.forEach((language) => {
+        language.removeEventListener("click", language_clicked);
+    });
     var imageSrc = "";
     var imageAlt = "";
     var title = "";
@@ -87,13 +90,16 @@ const enableScroll = () => {
 
 const removeDisplay = () => {
     popup.style.display = "none";
+    enableScroll();
+    languages.forEach((language) => {
+        language.addEventListener("click", language_clicked);
+    });
 };
 
 const close_popup = () => {
     popup.classList.remove("animate");
     popup_box.classList.remove("animate");
     setTimeout(removeDisplay, 800);
-    enableScroll();
 }
 
 
