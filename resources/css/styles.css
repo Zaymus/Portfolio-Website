@@ -42,15 +42,26 @@ p {
 	flex: 1;
 }
 
-.about_info,
+/* .about_info,
 #languages .container,
 #projects,
 #contact {
 	height: 100vh;
+} */
+
+section:nth-child(even) {
+	background-color: hsl(0, 0%, 87%);
 }
 
-section:nth-child(odd) {
-	background-color: hsl(0, 0%, 87%) !important;
+section {
+	height: 100vh;
+	scroll-snap-align: start;
+}
+
+.scroll-container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
 }
 
 header {
@@ -117,10 +128,6 @@ header .title {
 .contact:hover {
 	cursor: pointer;
 	opacity: 0.7;
-}
-
-article h2 {
-	padding-left: 5vw;
 }
 
 .about_info {
@@ -221,6 +228,12 @@ article h2 {
 .about_info--link:hover .link_name {
 	transform: scale(1) translateY(0);
 	opacity: 1;
+}
+
+#languages {
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 
 .skills-container {
