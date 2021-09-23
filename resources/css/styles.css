@@ -1,6 +1,7 @@
 :root {
 	/* --clr-accent: hsl(283, 70%, 45%); */
 	--clr-accent: hsl(159, 80%, 40%);
+	--clr-bg: hsl(0, 0%, 90%);
 	font-size: 16px;
 }
 
@@ -13,7 +14,7 @@
 
 html {
 	scroll-behavior: smooth;
-	background-color: hsl(0, 0%, 90%);
+	background-color: var(--clr-bg);
 }
 
 h1 {
@@ -178,21 +179,30 @@ article h2 {
 }
 
 .about_info--links {
-	max-width: 300px;
+	max-width: 400px;
 	width: 100%;
 }
 
 .about_info--links ul {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
 
 .about_info--link {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 8ch;
 	font-size: 2rem;
-	color: #242424;
+	color: hsl(0, 0%, 14%);
 	padding: 0 16px;
 	transition: all 300ms ease;
+	overflow: hidden;
+}
+
+.about_info--link i {
+	background-color: var(--clr-bg);
+	z-index: 100;
 }
 
 .about_info--link:hover {
@@ -201,63 +211,16 @@ article h2 {
 	transform: scale(1.25);
 }
 
-.about_info--link:hover .tooltip {
-	visibility: visible;
-	opacity: 1;
-	transform: scale(1);
-}
-
-.tooltip {
-	display: inline-block;
-	position: relative;
-	border-bottom: 1px dotted #666;
-	text-align: center;
-	opacity: 1;
-}
-
-.tooltip .bottom {
-	width: 120px;
-	position: relative;
-	top: 15px;
-	left: 50%;
-	transform: translateX(-68%);
-	color: white;
-	background-color: var(--clr-accent);
-	font-weight: normal;
-	font-size: 13px;
-	border-radius: 8px;
-	position: absolute;
-	z-index: 99999999;
-	border: 1px solid transparent;
-	box-shadow: 0 1px 8px transparent;
+.link_name {
+	transform: translateY(-100%);
+	transition: all 400ms 300ms ease-in-out;
+	font-size: 1.2rem;
 	opacity: 0;
-	transition: all 300ms 500ms ease;
 }
 
-.about_info--link:hover .bottom {
+.about_info--link:hover .link_name {
+	transform: scale(1) translateY(0);
 	opacity: 1;
-}
-
-.tooltip .bottom i {
-	position: absolute;
-	bottom: 100%;
-	left: 50%;
-	margin-left: -12px;
-	width: 24px;
-	height: 12px;
-	overflow: hidden;
-}
-
-.tooltip .bottom i::after {
-	content: "";
-	position: absolute;
-	width: 12px;
-	height: 12px;
-	left: 50%;
-	transform: translate(-50%, 50%) rotate(45deg);
-	background-color: var(--clr-accent);
-	border: 1px solid transparent;
-	box-shadow: 0 1px 8px transparent;
 }
 
 .skills-container {
@@ -320,10 +283,11 @@ article h2 {
 	position: absolute;
 	bottom: 50px;
 	transform: scale(1);
-	transition: all 300ms;
+	transition: all 600ms;
 	font-size: 1.3rem;
 	opacity: 0;
 }
+
 .language:hover .language_name {
 	transform: scale(1) translateY(50px);
 	opacity: 1;
@@ -353,7 +317,7 @@ article h2 {
 }
 
 .pop_up-container .row {
-	background-color: hsl(0, 0%, 90%);
+	background-color: var(--clr-bg);
 	border: 4px solid var(--clr-accent);
 	padding: 30px;
 	min-height: 60vh;
