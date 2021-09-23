@@ -4,6 +4,7 @@ const popup_box = document.getElementById("pop_up-row");
 const popup_title = document.querySelector(".pop_up-title");
 const languages = document.querySelectorAll(".language");
 const images = document.querySelectorAll(".language_img--wrapper");
+const popup_close = document.querySelector(".pop_up-close");
 
 popup.style.display = "none";
 
@@ -120,3 +121,8 @@ popup.onclick = (event) => {
         close_popup();
     }
 };
+
+popup_close.onclick = () => {
+    close_popup();
+}
+

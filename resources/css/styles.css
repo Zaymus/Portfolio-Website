@@ -329,6 +329,29 @@ header .title {
 	transform: translateY(0);
 }
 
+.pop_up-close {
+	position: absolute;
+	font-size: 1.5rem;
+	right: 0;
+	top: 0;
+	color: var(--clr-accent);
+	margin-right: 15px;
+	margin-top: 15px;
+	opacity: 0;
+	transform: scale(0);
+	transition: all 600ms 2500ms;
+}
+
+.pop_up-close:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.pop_up-container.animate .pop_up-close {
+	opacity: 1;
+	transform: scale(1);
+}
+
 .pop_up-container .row {
 	background-color: var(--clr-bg);
 	border: 4px solid var(--clr-accent);
