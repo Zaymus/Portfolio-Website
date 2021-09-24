@@ -443,7 +443,7 @@ header .title {
 	display: block;
 	height: 350px;
 	width: 550px;
-	margin: 15vh 2vw;
+	margin: 10vh 2vw;
 	border: 3px solid var(--clr-accent);
 	border-radius: 15px;
 	overflow: hidden;
