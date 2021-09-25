@@ -8,101 +8,100 @@ const language_bodies = document.querySelectorAll(".language_body");
 const images = document.querySelectorAll(".language_img--wrapper");
 const popup_close = document.querySelector(".pop_up-close");
 
+const language_names = [
+	"HTML 5",
+	"CSS 3",
+	"JavaScript",
+	"PHP",
+	"Python",
+	"React",
+	"Redux",
+	"SQL Databases",
+];
+
+let siblingLanguages = ["", ""];
+
 popup.style.display = "none";
 
 const language_clicked = (event) => {
 	languages.forEach((language) => {
 		language.removeEventListener("click", language_clicked);
 	});
-	var imageSrc = "";
-	var imageAlt = "";
-	var title = "";
-	var body = "";
+	var details = getLanguageDetails(event);
 
-	if (event.target.nodeName == "IMG") {
-		imageSrc = event.target.src;
-		imageAlt = event.target.alt;
-		title = event.target.parentNode.parentNode.childNodes[3].innerHTML;
-		body = event.target.parentNode.parentNode.childNodes[5].defaultValue;
-	} else if (event.target.nodeName == "FIGURE") {
-		imageSrc = event.target.childNodes[1].src;
-		imageAlt = event.target.childNodes[1].alt;
-		title = event.target.parentNode.childNodes[3].innerHTML;
-		body = event.target.parentNode.childNodes[5].defaultValue;
-	} else if (event.target.nodeName == "DIV") {
-		imageSrc = event.target.childNodes[1].childNodes[1].src;
-		imageAlt = event.target.childNodes[1].childNodes[1].alt;
-		title = event.target.childNodes[3].innerHTML;
-		body = event.target.childNodes[5].defaultValue;
+	popup_img.src = details["image"];
+	popup_img.alt = details["alt"];
+	popup_title.innerHTML = details["title"];
+	if (details["body"] == "") {
+		details["body"] = "Language details comming soon!";
 	}
-	popup_img.src = imageSrc;
-	popup_img.alt = imageAlt;
-	popup_title.innerHTML = title;
-	if (body == "") {
-		body = "Language details comming soon!";
-	}
-	popup_body.innerHTML = body;
+	popup_body.innerHTML = details["body"];
 	popup.style.display = "block";
 	setTimeout(startAnimation, 1);
 };
 
+const changeLanguageDetails = (newInfo) => {
+	classes = popup.className.split(" ");
+	classes.forEach((Class) => {
+		if (Class == "animate") {
+			var evt = new Event("click");
+			newInfo.dispatchEvent(evt);
+		}
+	});
+};
+
+const getLanguageDetails = (event) => {
+	let languageDetails = {
+		image: "",
+		alt: "",
+		title: "",
+		body: "",
+	};
+
+	if (event.target.nodeName == "IMG") {
+		languageDetails["image"] = event.target.src;
+		languageDetails["alt"] = event.target.alt;
+		languageDetails["title"] =
+			event.target.parentNode.parentNode.childNodes[3].innerHTML;
+		languageDetails["body"] =
+			event.target.parentNode.parentNode.childNodes[5].defaultValue;
+	} else if (event.target.nodeName == "FIGURE") {
+		languageDetails["image"] = event.target.childNodes[1].src;
+		languageDetails["alt"] = event.target.childNodes[1].alt;
+		languageDetails["title"] = event.target.parentNode.childNodes[3].innerHTML;
+		languageDetails["body"] =
+			event.target.parentNode.childNodes[5].defaultValue;
+	} else if (event.target.nodeName == "DIV") {
+		languageDetails["image"] = event.target.childNodes[1].childNodes[1].src;
+		languageDetails["alt"] = event.target.childNodes[1].childNodes[1].alt;
+		languageDetails["title"] = event.target.childNodes[3].innerHTML;
+		languageDetails["body"] = event.target.childNodes[5].defaultValue;
+	}
+
+	getSiblings(languageDetails);
+
+	return languageDetails;
+};
+
+const getSiblings = (language) => {
+	for (let i = 0; i < language_names.length; i += 1) {
+		if (language["title"] == language_names[i]) {
+			siblingLanguages[0] = languages[i - 1];
+			siblingLanguages[1] = languages[i + 1];
+		}
+	}
+};
+
 const startAnimation = () => {
-	disableScroll();
+	// disableScroll();
 	popup.style.display = "block";
 	popup.classList.add("animate");
 	popup_box.classList.add("animate");
 };
 
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-const keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
-function preventDefault(e) {
-	e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-	if (keys[e.keyCode]) {
-		preventDefault(e);
-		return false;
-	}
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-	window.addEventListener(
-		"test",
-		null,
-		Object.defineProperty({}, "passive", {
-			get: function () {
-				supportsPassive = true;
-			},
-		})
-	);
-} catch (e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent =
-	"onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-
-const disableScroll = () => {
-	window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-	window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-	window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-	window.addEventListener("keydown", preventDefaultForScrollKeys, false);
-};
-
-const enableScroll = () => {
-	window.removeEventListener("DOMMouseScroll", preventDefault, false);
-	window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-	window.removeEventListener("touchmove", preventDefault, wheelOpt);
-	window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
-};
-
 const removeDisplay = () => {
 	popup.style.display = "none";
-	enableScroll();
+	// enableScroll();
 	languages.forEach((language) => {
 		language.addEventListener("click", language_clicked);
 	});
@@ -119,8 +118,21 @@ languages.forEach((language) => {
 });
 
 document.addEventListener("keydown", (e) => {
+	// esc key
 	if (e.which == 27) {
+		e.preventDefault();
 		close_popup();
+	}
+	// left arrow
+	if (e.which == 37) {
+		e.preventDefault();
+		changeLanguageDetails(siblingLanguages[0]);
+	}
+
+	// right arrow
+	if (e.which == 39) {
+		e.preventDefault();
+		changeLanguageDetails(siblingLanguages[1]);
 	}
 });
 
@@ -133,3 +145,6 @@ popup.onclick = (event) => {
 popup_close.onclick = () => {
 	close_popup();
 };
+
+// var evt = new Event("click");
+// languages[5].dispatchEvent(evt);
