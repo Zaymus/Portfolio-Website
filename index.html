@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/about.css">
+    <link rel="stylesheet" href="resources/css/techStack.css">
+    <link rel="stylesheet" href="resources/css/projects.css">
+    <link rel="stylesheet" href="resources/css/contacts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
@@ -14,195 +18,201 @@
     <title>Carson Brown</title>
 </head>
 <body>
-    <div class="scroll-container">
-        <section id="about" class="main-section">
-        <header>
-            <div class="title">Carson <span class="highlight-text">Brown</span></div>
-            <nav>
-                <ul class="nav_link-list">
-                    <li class="tech_stack"><span class="link_hover">Languages</span></li>
-                    <li class="projects"><span class="link_hover">Projects</span></li>
-                    <li class="contact">Contact</li>
-                </ul>
-            </nav>
-        </header>
-        <div class="flex-1">
-            <div class="about_info row">
-                <div class="about_info--container">
-                    <figure class="about_info_picture--mask">
-                        <img class="about_info--picture" src="resources/images/profile-pic.jpg" alt="Picture of me!">
-                    </figure>
-                    <h1 class="about_info--intro">Hey! I'm <span class="highlight-text">Carson Brown</span>&nbsp;<span id="wave">👋</span></h1>
-                    <p class="about_info--body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias distinctio, provident delectus quae illo obcaecati impedit magnam quis non unde natus accusamus doloremque laudantium adipisci reiciendis ab voluptatem quibusdam facere nemo iusto. Sed, porro et? Dolores repellendus iste dicta.
-                    </p>
-                    <div class="about_info--links">
-                        <ul>
-                            <li class="about_info--link">
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <span class="link_name">LinkedIn</span>
-                            </li>
-                            <li class="about_info--link">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                                <span class="link_name">GitHub</span>
-                            </li>
-                            <li class="about_info--link">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <span class="link_name">Email</span>
-                            </li>
-                            <li class="about_info--link">
-                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                                <span class="link_name">Resume</span>
-                            </li>
-                        </ul>
+    <section id="about" class="main-section">
+    <header>
+        <div class="title">Carson <span class="highlight-text">Brown</span></div>
+        <nav>
+            <ul class="nav_link-list">
+                <li class="tech_stack"><span class="link_hover">Languages</span></li>
+                <li class="projects"><span class="link_hover">Projects</span></li>
+                <li class="contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex-1">
+        <div class="about_info row">
+            <div class="about_info--container">
+                <figure class="about_info_picture--mask">
+                    <img class="about_info--picture" src="resources/images/profile-pic.jpg" alt="Picture of me!">
+                </figure>
+                <h1 class="about_info--intro">Hey! I'm <span class="highlight-text">Carson Brown</span>&nbsp;<span id="wave">👋</span></h1>
+                <p class="about_info--body">
+                    I am a computer science student at Durham College and am on the way to completing a program at Ontario Tech University afterwards. I am an avid learner with a strong belief that there is always room for improvement and learning. After taking my first course of web development last year, my passion for the field and both front and back-end development have grown immensely. My main focus as a future full-stack developer is to create aesthetically pleasing front-ends along with developing efficient and effective back-ends with the main drive being pleasing my employer and clients.
+                </p>
+                <div class="about_info--links">
+                    <ul>
+                        <li class="about_info--link">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span class="link_name">LinkedIn</span>
+                        </li>
+                        <li class="about_info--link">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span class="link_name">GitHub</span>
+                        </li>
+                        <li class="about_info--link">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span class="link_name">Email</span>
+                        </li>
+                        <li class="about_info--link">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span class="link_name">Resume</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <section id="languages" class="main-section">
+        <div class="container">
+            <div class="row">
+                <h1>This is my <span class="highlight-text">technology stack</span></h1>
+                <div class="language_list">
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/html.png" alt="HTML Logo">
+                        </figure>
+                        <span class="language_name">HTML 5</span>
+                        <input type="hidden" class="language_body" value='I first started learning HTML in early 2021, and only learned the basics of how to structure elements on a page. However, while I was teaching myself more about HTML I found that there was so much more I had to learn including the different semantic type tags like "article", "section", "nav", etc. Along with learning these new tags, I would have to learn what semantic HTML is and how to put it into practice. Although I still have much to learn about HTML I believe that I am getting a pretty strong grasp of semantic HTML and how important the skeleton of the web page is, especially when it comes to more advanced or in-depth styling.'></input>
+                    </div>
+
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/css-3.png" alt="CSS Logo">
+                        </figure>
+                        <span class="language_name">CSS 3</span>
+                        <input type="hidden" class="language_body" value='A couple of weeks after I was introduced to HTML at school, we moved on to learning the basics of CSS and this is was my turning point and when I grew my passion exponentially for web development. Once we were given our first assignment, I could just feel how creative I felt and how much more I wanted to learn so I can start making websites that look visually appealing and something that I can be proud of after the hours of development it took to create. I am a very precise person and that is the same when it comes to design, I want everything to look perfect and clean. I still have lots to learn about CSS but I cant wait to keep learning it, I have learned a lot about responsive design and still am practicing it but next, I want to learn more about pseudo-classes and pseudo-elements. For example, I want to understand the "::before" and "::after" pseudo-classes because I have seen how powerful they can be when it comes to styling elements.'></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/js.png" alt="JavaScript Logo">
+                        </figure>
+                        <span class="language_name">JavaScript</span>
+                        <input type="hidden" class="language_body" value='JavaScript has been the latest technology I have started to learn and my current knowledge of it is entirely self-taught. I started teaching myself JavaScript in late July of 2021, and since then I have become comfortable with the language and enjoy using it to enhance my website developments. The best project and example I have that utilizes  JavaScript is this website, it uses a lot of javascript to create interactions for the user. For example, all of the "about me" icons that take the users to my various social platforms utilize JavaScript, the scroll animation that brings the user to the language/projects sections on the top navbar uses JavaScript, and the biggest impact JavaScript has on this webpage is the pop up you are reading from right now, the language icon, title, and this body are all taken from The HTML code with JavaScript and the DOM, all using event triggers and targets. Using this technology grew my passion even more since CSS, being able to efficiently set links using for loops and navigating the DOM to alter HTML elements and CSS styles always makes me excited and happy when I see it all working the way I envisioned.'></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/php.png" alt="PHP Logo">
+                        </figure>
+                        <span class="language_name">PHP</span>
+                        <input type="hidden" class="language_body" value='PHP has been the language or technology I have not excessively taught myself in my spare time, I have been learning a lot about it during school and I feel like the path that I am learning is going in the right direction. I first started learning PHP in early June, and so far I have learned about the basics of PHP and how PHP interacts with webpages as a server-side language. the main focus of using PHP during this time was to incorporate SQL databases into my websites and to add functionality to forms to create sign in pages or to display SQL table data. Currently, I am learning more advanced uses of PHP like creating sessions and cookies. I have also utilized PHP to prepare SQL queries and executing them when I need to increase the security of my system and to assist in SQL injection attacks.'></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/python.png" alt="Python Logo">
+                        </figure>
+                        <span class="language_name">Python</span>
+                        <input type="hidden" class="language_body" value='Python is the language I am most comfortable with'></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/react.png" alt="React Logo">
+                        </figure>
+                        <span class="language_name">React</span>
+                        <input type="hidden" class="language_body" value=''></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/redux.png" alt="Redux Logo">
+                        </figure>
+                        <span class="language_name">Redux</span>
+                        <input type="hidden" class="language_body" value=''></input>
+                    </div>
+                    <div class="language">
+                        <figure class="language_img--wrapper">
+                            <img src="resources/images/icons/sql.png" alt="SQL Logo">
+                        </figure>
+                        <span class="language_name">SQL Databases</span>
+                        <input type="hidden" class="language_body" value=''></input>
+                    </div>
+                    <div class="pop_up-container">
+                        <div id="pop_up-row" class="row">
+                            <div class="pop_up">
+                                <figure class="language_img--wrapper">
+                                    <img src="" alt="">
+                                </figure>
+                                <i class="fas fa-times pop_up-close link_hover"></i>
+                                <h1 class="pop_up-title"></h1>
+                                <p class="pop_up-body"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </section>
-        
-        <section id="languages" class="main-section">
-            <div class="container">
-                <div class="row">
-                    <h1>This is my <span class="highlight-text">technology stack</span></h1>
-                    <div class="language_list">
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/html.png" alt="HTML Logo">
-                            </figure>
-                            <span class="language_name">HTML 5</span>
-                        </div>
+    </section>
 
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/css-3.png" alt="CSS Logo">
-                            </figure>
-                            <span class="language_name">CSS 3</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/js.png" alt="JavaScript Logo">
-                            </figure>
-                            <span class="language_name">JavaScript</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/php.png" alt="PHP Logo">
-                            </figure>
-                            <span class="language_name">PHP</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/python.png" alt="Python Logo">
-                            </figure>
-                            <span class="language_name">Python</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/react.png" alt="React Logo">
-                            </figure>
-                            <span class="language_name">React</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/redux.png" alt="Redux Logo">
-                            </figure>
-                            <span class="language_name">Redux</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language_img--wrapper">
-                                <img src="resources/images/icons/sql.png" alt="SQL Logo">
-                            </figure>
-                            <span class="language_name">SQL Databases</span>
-                        </div>
-                        <div class="pop_up-container">
-                            <div id="pop_up-row" class="row">
-                                <div class="pop_up">
-                                    <figure class="language_img--wrapper">
-                                        <img src="" alt="">
-                                    </figure>
-                                    <i class="fas fa-times pop_up-close link_hover"></i>
-                                    <h1 class="pop_up-title">Lorem, ipsum dolor.</h1>
-                                    <p class="pop_up-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut facere pariatur aspernatur cumque molestiae animi! Labore reiciendis nulla neque, officia quaerat illo optio vel consequuntur quo, cumque voluptatem perspiciatis vitae? Optio sequi modi, quam sed nihil necessitatibus pariatur vel exercitationem mollitia magni error omnis. Repellendus error architecto nulla eligendi. Nemo facere, animi alias possimus ut cumque vero aliquam sed molestias dolore delectus blanditiis eius eveniet dolorem quam? Praesentium laudantium dolore laborum sit voluptatem accusamus, deleniti facilis aperiam, ducimus tenetur fugit reprehenderit ea. Aperiam, illo error fugiat officia laudantium esse ullam ipsum ratione quas blanditiis tempora et adipisci velit, necessitatibus vel.</p>
-                                </div>
+    <section id="projects" class="main-section">
+        <div class="project-container">
+            <div class="row">
+                <h1>These are some of my <span class="highlight-text">projects</span>!</h1>
+                <div class="project-list">
+
+                    <section class="project">
+                        <figure class="project_img--wrapper">
+                            <img src="resources/images/project_thumbnails/FlexBoxLandingPage.png" alt="Website landing page using flexbox" class="project--img">
+                        </figure>
+                        <div class="project-info">
+                            <h3 class="project_name">Flex Box Landing Page</h3>
+                            <h4 class="project_tech">HTML, CSS</h4>
+                            <div class="project-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi, optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
+                            </div>
+                            <div class="project_links">
+                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
+                                <i id="project-link" class="fas fa-link link_hover"></i>
                             </div>
                         </div>
-                    </div>
+                    </section>
+                    <section class="project">
+                        <figure class="project_img--wrapper">
+                            <img src="resources/images/project_thumbnails/ResponsiveSlidingForm.png" alt="Sign in/Sign up webpage" class="project--img">
+                        </figure>
+                        <div class="project-info">
+                            <h3 class="project_name">Responsive Sliding Form</h3>
+                            <h4 class="project_tech">HTML, CSS</h4>
+                            <div class="project-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam
+                                tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi,
+                                optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
+                            </div>
+                            <div class="project_links">
+                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
+                                <i id="project-link" class="fas fa-link link_hover"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="project">
+                        <figure class="project_img--wrapper">
+                            <img src="resources/images/project_thumbnails/TeaCozy.png" alt="Simple tea store landing page" class="project--img">
+                        </figure>
+                        <div class="project-info">
+                            <h3 class="project_name">Tea Cozy</h3>
+                            <h4 class="project_tech">HTML, CSS, JavaScript</h4>
+                            <div class="project-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam
+                                tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi,
+                                optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
+                            </div>
+                            <div class="project_links">
+                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
+                                <i id="project-link" class="fas fa-link link_hover"></i>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="main-section">
-            <div class="project-container">
-                <div class="row">
-                    <h1>These are some of my <span class="highlight-text">projects</span>!</h1>
-                    <div class="project-list">
-
-                        <section class="project">
-                            <figure class="project_img--wrapper">
-                                <img src="resources/images/project_thumbnails/FlexBoxLandingPage.png" alt="Website landing page using flexbox" class="project--img">
-                            </figure>
-                            <div class="project-info">
-                                <h3 class="project_name">Flex Box Landing Page</h3>
-                                <h4 class="project_tech">HTML, CSS</h4>
-                                <div class="project-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi, optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
-                                </div>
-                                <div class="project_links">
-                                    <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
-                                    <i id="project-link" class="fas fa-link link_hover"></i>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <figure class="project_img--wrapper">
-                                <img src="resources/images/project_thumbnails/ResponsiveSlidingForm.png" alt="Sign in/Sign up webpage" class="project--img">
-                            </figure>
-                            <div class="project-info">
-                                <h3 class="project_name">Responsive Sliding Form</h3>
-                                <h4 class="project_tech">HTML, CSS</h4>
-                                <div class="project-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam
-                                    tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi,
-                                    optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
-                                </div>
-                                <div class="project_links">
-                                    <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
-                                    <i id="project-link" class="fas fa-link link_hover"></i>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <figure class="project_img--wrapper">
-                                <img src="resources/images/project_thumbnails/TeaCozy.png" alt="Simple tea store landing page" class="project--img">
-                            </figure>
-                            <div class="project-info">
-                                <h3 class="project_name">Tea Cozy</h3>
-                                <h4 class="project_tech">HTML, CSS, JavaScript</h4>
-                                <div class="project-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit id recusandae nisi repellat minima ullam
-                                    tempora accusamus aliquid sapiente nulla voluptatibus nihil repellendus quae sed totam dolorem fuga eligendi,
-                                    optio reiciendis, eius omnis quia, velit odit? Nobis, ullam esse!
-                                </div>
-                                <div class="project_links">
-                                    <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
-                                    <i id="project-link" class="fas fa-link link_hover"></i>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="main-section">
-            <article>
-                <h2>Contact</h2>
-                <ul>
-                    <li>Email: carsonbrown47@gmail.com</li>
-                </ul>
-            </article>
-        </section>
-    </div>
+    <section id="contact" class="main-section">
+        <article>
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: carsonbrown47@gmail.com</li>
+            </ul>
+        </article>
+    </section>
 </body>
 </html>
