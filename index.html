@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="resources/css/about.css">
     <link rel="stylesheet" href="resources/css/techStack.css">
     <link rel="stylesheet" href="resources/css/projects.css">
-    <link rel="stylesheet" href="resources/css/contacts.css">
+    <link rel="stylesheet" href="resources/css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="resources/js/main.js" defer></script>
     <script src="resources/js/pop-up.js" defer></script>
     <script src="https://kit.fontawesome.com/2b22aff2cf.js" crossorigin="anonymous"></script>
@@ -199,13 +200,18 @@
             </div>
         </div>
     </section>
-    <!-- <section id="contact" class="main-section">
-        <article>
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: carsonbrown47@gmail.com</li>
-            </ul>
-        </article>
-    </section> -->
+    <section id="contact" class="main-section">
+        <div class="contact_form-container">
+            <form class=frmContact>
+                <h2>Contact <span class="highlight-text">Me</span>!</h2>
+                <input class="input" id="fName" type="text" placeholder="First Name" autocomplete="off" required>
+                <input class="input" id="lName" type="text" placeholder="Last Name" autocomplete="off" required>
+                <input class="input" id="email" type="email" placeholder="Email" autocomplete="off" required>
+                <textarea class="input" name="message" id="message" placeholder="Message" autocomplete="off" required></textarea>
+                <button class="reset" onclick="resetFrm();">Reset</button>
+                <button class="submit" onclick="submitFrm();">Submit</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
