@@ -32,7 +32,8 @@
 	grid-row: 1 / 2;
 	text-align: center;
 	font-size: 36px;
-	line-height: 36px;
+	line-height: 40px;
+	padding-top: 5px;
 	animation: shake 3000ms infinite ease;
 }
 
@@ -133,4 +134,9 @@ button {
 button:hover {
 	cursor: pointer;
 	transform: scale(1.07);
+}
+
+#frmStatus {
+	text-align: center;
+	margin-bottom: 15px;
 }

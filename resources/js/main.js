@@ -29,10 +29,12 @@ const firstName = document.querySelector("#fName");
 const lastName = document.querySelector("#lName");
 const emailAddress = document.querySelector("#email");
 const message = document.querySelector("#message");
+const frmStatus = document.querySelector("#frmStatus");
 var value_fn = "";
 var value_ln = "";
 var value_email = "";
 var value_message = "";
+frmStatus.innerHTML = "";
 
 contactFrm.addEventListener(
 	"submit",
@@ -142,8 +144,10 @@ function submitFrm() {
 	value_message = message.value;
 	if (isValid()) {
 		let name = value_fn + " " + value_ln;
-		let message = name + ": \n" + value_email + "\n\n" + value_message;
+		let message = name + ": " + value_email + " - " + value_message;
 		sendEmail(message);
+		frmStatus.innerHTML =
+			"Thank you for reaching out! I will do my best to respond as soon as possible!";
 		resetFrm();
 	}
 }
