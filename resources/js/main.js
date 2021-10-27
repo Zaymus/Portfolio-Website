@@ -122,7 +122,7 @@ function sendEmail(message) {
 	Email.send({
 		Host: "smtp.gmail.com",
 		Username: "contact.webportfolio@gmail.com",
-		Password: "creeper02011",
+		Password: "mywebportfolio01",
 		To: "carsonbrown47@gmail.com",
 		From: "contact.webportfolio@gmail.com",
 		Subject: "Contact from web portfolio",
