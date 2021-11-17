@@ -53,6 +53,24 @@
 	align-items: center;
 }
 
+#clickme {
+	font-family: "Caveat";
+	font-size: 1.3rem;
+	font-weight: 600;
+	position: relative;
+	text-align: center;
+	left: -350px;
+	top: 25px;
+}
+
+#clickme img {
+	width: 80px;
+	transform: rotate(-90deg);
+	position: relative;
+	left: -50px;
+	top: 70px;
+}
+
 .language_list {
 	display: flex;
 	justify-content: center;
