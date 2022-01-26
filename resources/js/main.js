@@ -14,18 +14,18 @@ const location_contact = document.querySelector("#contact").offsetTop;
 const projects_git = document.querySelectorAll("#project-git");
 const projects_web = document.querySelectorAll("#project-link");
 const git_links = [
-	"https://github.com/Zaymus/Flexbox_Landing_Page",
-	"https://github.com/Zaymus/user-login-register-webpage",
-	"https://github.com/Zaymus/Tea-Cozy",
 	"https://github.com/Zaymus/minesweeper",
 	"https://github.com/Zaymus/Snake",
+	"https://github.com/Zaymus/user-login-register-webpage",
+	"https://github.com/Zaymus/Flexbox_Landing_Page",
+	"https://github.com/Zaymus/Tea-Cozy",
 ];
 const web_links = [
-	"https://zaymus.github.io/Flexbox_Landing_Page/",
-	"https://zaymus.github.io/user-login-register-webpage/",
-	"https://zaymus.github.io/Tea-Cozy/",
 	"https://zaymus.github.io/minesweeper/",
 	"https://zaymus.github.io/Snake/",
+	"https://zaymus.github.io/user-login-register-webpage/",
+	"https://zaymus.github.io/Flexbox_Landing_Page/",
+	"https://zaymus.github.io/Tea-Cozy/",
 ];
 
 const contactFrm = document.querySelector(".frmContact");
