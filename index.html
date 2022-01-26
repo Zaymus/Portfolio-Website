@@ -150,16 +150,31 @@
             <div class="row">
                 <h1>These are some of my <span class="highlight-text">projects</span>!</h1>
                 <div class="project-list">
-
                     <section class="project">
                         <figure class="project_img--wrapper">
-                            <img src="resources/images/project_thumbnails/FlexBoxLandingPage.png" alt="Website landing page using flexbox" class="project--img">
+                            <img src="resources/images/project_thumbnails/Minesweeper.png" alt="Basic rendition of the classic game Minesweeper" class="project--img">
                         </figure>
                         <div class="project-info">
-                            <h3 class="project_name">Flex Box Landing Page</h3>
-                            <h4 class="project_tech">HTML, CSS</h4>
+                            <h3 class="project_name">Minesweeper</h3>
+                            <h4 class="project_tech">HTML, CSS, JavaScript</h4>
                             <div class="project-body">
-                                In this project, I created a landing page for a ficticious investment company that focuses on startups within the mobility sector. I created this project to practice and further my understanding of the flexbox display in CSS. This project is using the flexbox features; content centering, flex-wrap, content justification, and item alignment.
+                                With this project, I decided to try a more JavaScript heavy project and at the time I had been playing minesweeper on my phone while I am on the go or just have a few minutes to relax as it is a very easy game to play and requires a good amount of thinking to be successful. It is also a fairly basic game in terms of the rules and code complexity. Overall, it was a very fun project and it did teach me a good amount in creating efficient algorithms through the clear empty tiles algorithm. 
+                            </div>
+                            <div class="project_links">
+                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
+                                <i id="project-link" class="fas fa-link link_hover"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="project">
+                        <figure class="project_img--wrapper">
+                            <img src="resources/images/project_thumbnails/Snake.png" alt="Basic rendition of the classic game Snake" class="project--img">
+                        </figure>
+                        <div class="project-info">
+                            <h3 class="project_name">Snake</h3>
+                            <h4 class="project_tech">HTML, CSS, JavaScript</h4>
+                            <div class="project-body">
+                                The Snake game is a very simple game in terms of rules but it can be complicated when thinking on how to create it from scratch. With this project I wanted to learn more about JavaScript graphics so the entire game is made using the canvas tag, and I also wanted to learn more about objects/object-oriented programming within JavaScript so I made sure that the snake and apples were objects that had their own properties and methods.
                             </div>
                             <div class="project_links">
                                 <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
@@ -185,6 +200,22 @@
                     </section>
                     <section class="project">
                         <figure class="project_img--wrapper">
+                            <img src="resources/images/project_thumbnails/FlexBoxLandingPage.png" alt="Website landing page using flexbox" class="project--img">
+                        </figure>
+                        <div class="project-info">
+                            <h3 class="project_name">Flex Box Landing Page</h3>
+                            <h4 class="project_tech">HTML, CSS</h4>
+                            <div class="project-body">
+                                In this project, I created a landing page for a ficticious investment company that focuses on startups within the mobility sector. I created this project to practice and further my understanding of the flexbox display in CSS. This project is using the flexbox features; content centering, flex-wrap, content justification, and item alignment.
+                            </div>
+                            <div class="project_links">
+                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
+                                <i id="project-link" class="fas fa-link link_hover"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="project">
+                        <figure class="project_img--wrapper">
                             <img src="resources/images/project_thumbnails/TeaCozy.png" alt="Simple tea store landing page" class="project--img">
                         </figure>
                         <div class="project-info">
@@ -199,27 +230,15 @@
                             </div>
                         </div>
                     </section>
-                    <section class="project">
-                        <figure class="project_img--wrapper">
-                            <img src="resources/images/project_thumbnails/minesweeper.png" alt="basic rendition of the classic game Minesweeper" class="project--img">
-                        </figure>
-                        <div class="project-info">
-                            <h3 class="project_name">Minesweeper</h3>
-                            <h4 class="project_tech">HTML, CSS, JavaScript</h4>
-                            <div class="project-body">
-                                With this project, I decided to try a more JavaScript heavy project and at the time I had been playing minesweeper on my phone while I am on the go or just have a few minutes to relax as it is a very easy game to play and requires a good amount of thinking to be successful. It is also a fairly basic game in terms of the rules and code complexity. Overall, it was a very fun project and it did teach me a good amount of efficiency through the clearing algorithm needed when the user clicks on an empty space. 
-                            </div>
-                            <div class="project_links">
-                                <i id="project-git" class="fab fa-github link_hover" aria-hidden="true"></i>
-                                <i id="project-link" class="fas fa-link link_hover"></i>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
     </section>
     <section id="contact" class="main-section">
+        <p style="margin: 75px 0px; text-align: center;">
+            <span style="font-size: 1.75rem; font-weight: bold;">Currently under maintenance...</span> <br />
+            Please contact me through my email (carsonbrown47@gmail.com) or through LinkedIn
+        </p>
         <div class="contact_form-container">
             <form class=frmContact>
                 <h2>Contact <span class="highlight-text">Me</span>!</h2>
@@ -228,7 +247,7 @@
                 <input class="input" id="email" type="email" placeholder="Email" autocomplete="off" required>
                 <textarea class="input" name="message" id="message" placeholder="Message" autocomplete="off" required></textarea>
                 <button class="reset" onclick="resetFrm();">Reset</button>
-                <button class="submit" onclick="submitFrm();">Submit</button>
+                <button class="submit" onclick="submitFrm();" disabled>Submit</button>
             </form>
             <h3 id="frmStatus">Thank you for reaching out! I will do my best to respond as soon as possible!</h3>
         </div>

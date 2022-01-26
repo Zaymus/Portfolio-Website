@@ -17,11 +17,15 @@ const git_links = [
 	"https://github.com/Zaymus/Flexbox_Landing_Page",
 	"https://github.com/Zaymus/user-login-register-webpage",
 	"https://github.com/Zaymus/Tea-Cozy",
+	"https://github.com/Zaymus/minesweeper",
+	"https://github.com/Zaymus/Snake",
 ];
 const web_links = [
 	"https://zaymus.github.io/Flexbox_Landing_Page/",
 	"https://zaymus.github.io/user-login-register-webpage/",
 	"https://zaymus.github.io/Tea-Cozy/",
+	"https://zaymus.github.io/minesweeper/",
+	"https://zaymus.github.io/Snake/",
 ];
 
 const contactFrm = document.querySelector(".frmContact");
@@ -120,14 +124,15 @@ function isValid() {
 
 function sendEmail(message) {
 	Email.send({
-		Host: "smtp.gmail.com",
+		Host: "smtp.elasticemail.com",
 		Username: "contact.webportfolio@gmail.com",
-		Password: "mywebportfolio01",
+		Password: "FBBCDD24EED2402332C3D32E69B048258E88",
 		To: "carsonbrown47@gmail.com",
 		From: "contact.webportfolio@gmail.com",
 		Subject: "Contact from web portfolio",
 		Body: message,
 	});
+	console.log("email sent");
 }
 
 function resetFrm() {
@@ -138,13 +143,16 @@ function resetFrm() {
 }
 
 function submitFrm() {
+	console.log("submit button clicked");
 	value_fn = firstName.value;
 	value_ln = lastName.value;
 	value_email = emailAddress.value;
 	value_message = message.value;
 	if (isValid()) {
+		console.log("values are valid");
 		let name = value_fn + " " + value_ln;
 		let message = name + ": " + value_email + " - " + value_message;
+		console.log("sending email");
 		sendEmail(message);
 		frmStatus.innerHTML =
 			"Thank you for reaching out! I will do my best to respond as soon as possible!";
