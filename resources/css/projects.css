@@ -36,10 +36,14 @@
 	border-radius: 15px;
 	overflow: hidden;
 }
+
+.project_img--wrapper {
+	height: 115%;
+}
+
 .project_img--wrapper img {
-	width: 120%;
+	height: 100%;
 	position: relative;
-	left: -10%;
 	transition: all 500ms ease;
 }
 
@@ -111,11 +115,16 @@
 	.project {
 		height: 400px;
 		width: 700px;
-		margin: 15vh 2vw;
+		margin: 7vh 2vw;
+	}
+
+	.project_img--wrapper {
+		height: auto;
 	}
 
 	.project-info {
 		padding-top: 20%;
+		height: 120%;
 	}
 
 	.project_links {
@@ -134,8 +143,12 @@
 		width: 500px;
 	}
 
+	.project_img--wrapper {
+		height: 115%;
+	}
+
 	.project-info {
-		padding-top: 15%;
+		padding-top: 5%;
 	}
 
 	.project_links {
